@@ -1,27 +1,25 @@
-# MISW4104Parcial1
+# MISW4104 Parcial1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+## Arquitectura
 
-## Development server
+Los componentes y servicios de la aplicación se encuentran en `/app`. Dentro se encuentra el módulo para Cafés, el cual contiene un componente principal [coffees.component.ts](src/app/coffees/coffees.component.ts) que se encarga de llamar al componente que reenderiza la tabla de cafés, al igual que mostrar la cantidad de cada tipo de café. Este componente también se encarga de llamar al servicio de `CoffeeService` y pasar el resultado al componente de `CoffeeList`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Dentro de coffees se encuentra una carpeta `services`, la cual contiene todos los servicios del módulo.
 
-## Code scaffolding
+Por otro lado, en la carpeta `shared/models` se encuentran los modelos utilizados en la aplicación.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Ambiente Utilizado
+- Angular CLI: 18.2.9
+- Node: 20.18.0
+- Npm: 10.8.2
 
-## Build
+## Instalar Dependencias
+Para instalar las dependencias utiliza el comando `npm install`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Servidor Desarrollo
 
-## Running unit tests
+Para correr la aplicación utilice el comando `ng serve`. Este correra en la ruta `localhost:4200`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Correr Pruebas Unitarias
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Utiliza `ng test` para ejecutar las pruebas utilizando [Karma](https://karma-runner.github.io).
